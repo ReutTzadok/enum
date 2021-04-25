@@ -10,14 +10,11 @@ public class HttpCodeStrategy {
         handleCode.handleHttpCode(351);
         handleCode.handleHttpCode(472);
         handleCode.handleHttpCode(590);
-        handleCode.handleHttpCode(99);
+        handleCode.handleHttpCode(600); // true negative, should throw an exception
     }
 
     public void handleHttpCode(int httpCode) {
-        //todo refactor and finish this method without using even one if statement
-
         CodeOfHttp status = CodeOfHTTPFactory.findStatusByCode(httpCode);
         status.getDoSomething().doSomething();
-
     }
 }
